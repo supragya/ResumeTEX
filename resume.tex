@@ -5,9 +5,9 @@
 % License: MIT License
 % -------------------------
 
-\documentclass[11pt, a4paper]{article}
+\documentclass[10pt, a4paper]{article}
 \usepackage{tabularx}
-\usepackage[left=1cm,top=3cm,right=1cm,bottom=1cm,top=2cm,bindingoffset=1cm]{geometry}
+\usepackage[left=1cm,top=3cm,right=1cm,bottom=1cm,top=3cm,bindingoffset=1cm]{geometry}
 \usepackage{titlesec}
 
 % Margin adjustments
@@ -61,6 +61,7 @@
 \section*{Experience}
 \vspace{-8px}
 \hrule
+
 \vspace{8px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
@@ -70,8 +71,93 @@
 
 \begin{itemize}
 	\itemsep0em
-	\item Proposed \textbf{raw video capturing system} over high speed USB3 and auxilary Gigabit Ethernet channel from AXIOM Beta (Open Hardware) cameras.
-	\item Introduced interoperability by capturing MLV files (Magic Lantern) from native RAW12 of AXIOM cameras, which was easily saved to DNG sequence, allowing code reuse. This saved months of development time on otherwise writing performant code to render industry standard RAW file format.
-	
+	\item Developed \textbf{raw video containering system} (file format specifications) over high speed USB3 and auxilary Gigabit Ethernet channel from AXIOM Beta (Open Hardware) cameras.
+	\item Introduced interoperability by capturing MLV files (Magic Lantern) from native RAW12 of AXIOM cameras, which was easily saved to DNG sequence, allowing code reuse. This \textbf{saved months of development time} on otherwise writing performant code to render industry standard RAW file format.
 \end{itemize}
+
+\vspace{8px}
+\hspace{5px}
+\begin{tabularx}{\textwidth}{X r}
+	\textbf{Vicara Tech} & \textit{April 2018 - July 2018} \\
+	\textit{\small Software Developer, Windows Service / .NET / SDK Development} & \\
+\end{tabularx}
+
+\begin{itemize}
+	\itemsep0em
+	\item Developed \textbf{Kai Windows service} to allow custom software (eg. VLC media player) and deeply integrated systems to be controlled using a gesture control device on Windows platform.
+	\item Kai Service modules were build to be \textbf{light, less that 1MB in size} and allowed operations with \textbf{low latency, less than 10ms} (comparable to mouse/keyboard in terms of latency).
+\end{itemize}
+
+\section*{Opensouce contributions}
+\vspace{-8px}
+\hrule
+\vspace{8px}
+\hspace{5px}
+\begin{tabularx}{\textwidth}{X r}
+	\textbf{OpenCine, Apertus Association} & \textit{February 2018 - Ongoing	} \\
+	\textit{\small OpenSource contributor, Qt / C / C++} & \\
+\end{tabularx}
+
+\begin{itemize}
+	\itemsep0em
+	\item OpenCine is a PC based raw processing tool designed from the ground up for moving images instead of still images, filling the deficit of an open source tool to process CinemaDNG MXF files.
+	\item Developed \textbf{libfuse-FrameServer} to serve frames of DNG sequences / RAW12 files to external applications (eg. Adobe Premiere Pro) by serving a proxy AVI processed by OCcore in the backend.
+\end{itemize}
+
+\vspace{8px}
+\hspace{5px}
+\begin{tabularx}{\textwidth}{X r}
+	\textbf{HelenOS} & \textit{March 2017 - September 2017} \\
+	\textit{\small OpenSource contributor, non POSIX C} & \\
+\end{tabularx}
+
+\begin{itemize}
+	\itemsep0em
+	\item HelenOS is a microkernel Operating System with a standard, working microkernel design, however lacked fully functional shell system.
+	\item Developed \textbf{HLang} scripting language for writing automatic regression testing for nightly builds.
+\end{itemize}
+
+\section*{Projects}
+\vspace{-8px}
+\hrule
+
+\hspace{5px}
+\begin{itemize}
+	\item \textbf{DirectorySync}: Using inotify-tools to sync directories on linux systems over a network.
+	\item \textbf{PiNG12RAW}: RAW12 image debayering and channel extraction tool.
+	\item \textbf{Linpak}: A simple bash based script to install important packages based on the linux distribution. Used by Open Source communities: VisMa (Visual Math) and OpenCine.
+	\item \textbf{MJMLNewsletter}: An MJML based newsletter generation system using node.js, handlebars for monthly newsletters by Apertus Association.
+	\item \textbf{AirSense}: An economic air sensing device (less than INR 500) for sensing temperature, humidity and particles (ppm) for actively controlling home automation systems, connects to ThinkSpeak for data analysis.
+\end{itemize}
+
+\section*{Publications}
+\vspace{-8px}
+\hrule
+\vspace{8px}
+\begin{itemize}
+	\item \textbf{eMDPM: Efficient Multi Dimentional Pattern Matching on GPU}, submitted and accepted in ICSICCS 2018, to be published by Springer Intl' Book series. Expected October, 2018.
+\end{itemize}
+
+\section*{Awards and achievements}
+\vspace{-8px}
+\hrule
+\vspace{8px}
+\begin{itemize}
+	\item \textbf{Recommended by MHRD, India}: Letter of Appreciation by Smt. Smriti Irani, former minister, Ministry of Human Resource and Development, Govt. of India
+	\item \textbf{INSPIRE Fellowship}: Recipient of INSPIRE science fellowship (2013-2015), led by Dept. of Science and Technology and DRDO, India
+	\item \textbf{Host, Student Symposium} on security fundamentals and system interactions, VIT Chennai, 2016
+	\item \textbf{Coordinator, GameJam 2.0}: conducted and judged a 24-hour long hackathon on game development (Unity 3D), VIT Chennai, 2017
+\end{itemize}
+
+\section*{Skills and relevant proficiencies}
+\vspace{-8px}
+\hrule
+\vspace{8px}
+\begin{itemize}
+	\item \textbf{Languages}: C, C++, C#, Python, Java, JavaScipt
+	\item \textbf{Technologies}: Qt, ReactJS, NodeJS, Heroku, GCE, AWS
+	\item \textbf{Courses}: Machine Learning - Caltech, Advanced Algorithms - Harvard University
+\end{itemize}
+
+
 \end{document}
