@@ -1,13 +1,77 @@
-\documentclass[11pt]{article}
+% -------------------------
+% ResumeTex
+% Resume/CV template
+% Supragya Raj
+% License: MIT License
+% -------------------------
+
+\documentclass[11pt, a4paper]{article}
+\usepackage{tabularx}
+\usepackage[left=1cm,top=3cm,right=1cm,bottom=1cm,top=2cm,bindingoffset=1cm]{geometry}
+\usepackage{titlesec}
+
+% Margin adjustments
+%\addtolength{\oddsidemargin}{-1.5in}
+%\addtolength{\evensidemargin}{-1.5in}
+%\addtolength{\topmargin}{-1.2in}
+
+% Sans serif fontface
+\renewcommand{\familydefault}{\sfdefault}
+
+\titleformat{\section}
+  {\normalfont\scshape}{\thesection}{1em}{}
+
+\setlength{\parindent}{0px}
 
 \begin{document}
-This is my first latex document. \\
-Suppose we are given a rectangle with side lengths $X+1$ and $X$
-This equation $x^2+4x = 40$ %inline math mode
+\begin{center}
+\Large \textbf{Supragya Raj}
 
-%display math mode
-This is my first latex document. \\
-Suppose we are given a rectangle with side lengths $X+1$ and $X$
-This equation $$x^2+4x = 40$$ %inline math mode
 
+\normalsize Curriculum vitae
+
+
+\end{center}
+\begin{tabularx}{\textwidth}{X r}
+	http://www.supragyaraj.com & Email: supragyaraj@gmail.com \\
+	http://github.com/supragya & +91 97907 22967 
+\end{tabularx}
+\newline
+
+
+\section*{Education}
+\vspace{-8px}
+\hrule
+\vspace{8px}
+\hspace{5px}
+\begin{tabularx}{\textwidth}{X r}
+	\textbf{Vellore Institute of Technology} & Chennai, India \\
+	\textit{\small Bachelor of Technology in Computer Science and Engineering GPA: 8.88/10.0} & \textit{Expected May, 2019} 
+\end{tabularx}
+
+\vspace{8px}
+\hspace{5px}
+\begin{tabularx}{\textwidth}{X r}
+	\textbf{Army Public School, Shankar Vihar} & New Delhi, India \\
+	\textit{\small Senior Secondary, (PCM + CS), 12th CBSE:  95.6\% (aggregate), 98\% (CS)} & \textit{May 2015} \\
+	\textit{\small High School, 10th CBSE, CGPA 10.0} & \textit{May 2013}
+\end{tabularx}
+
+
+\section*{Experience}
+\vspace{-8px}
+\hrule
+\vspace{8px}
+\hspace{5px}
+\begin{tabularx}{\textwidth}{X r}
+	\textbf{Google Summer of Code 2018} & \textit{April 2018 - August 2018} \\
+	\textit{\small Student Developer, Apertus association} & \\
+\end{tabularx}
+
+\begin{itemize}
+	\itemsep0em
+	\item Proposed \textbf{raw video capturing system} over high speed USB3 and auxilary Gigabit Ethernet channel from AXIOM Beta (Open Hardware) cameras.
+	\item Introduced interoperability by capturing MLV files (Magic Lantern) from native RAW12 of AXIOM cameras, which was easily saved to DNG sequence, allowing code reuse. This saved months of development time on otherwise writing performant code to render industry standard RAW file format.
+	
+\end{itemize}
 \end{document}
