@@ -5,16 +5,15 @@
 % License: MIT License
 % -------------------------
 
-\documentclass[10pt, a4paper]{article}
+\documentclass[9pt, a4paper]{article}
 \usepackage{tabularx}
-\usepackage[left=1cm,top=3cm,right=1cm,bottom=1cm,top=3cm,bindingoffset=1cm]{geometry}
+\usepackage[left=0cm,right=1cm,bottom=1cm,top=1cm,bindingoffset=1cm]{geometry}
 \usepackage{titlesec}
+\usepackage{enumitem}
 
 % Margin adjustments
 %\addtolength{\oddsidemargin}{-1.5in}
 %\addtolength{\evensidemargin}{-1.5in}
-%\addtolength{\topmargin}{-1.2in}
-
 % Sans serif fontface
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -22,6 +21,11 @@
   {\normalfont\scshape}{\thesection}{1em}{}
 
 \setlength{\parindent}{0px}
+\addtolength{\textheight}{1.0in}
+\linespread{0}
+\setlength{\parskip}{0.3ex}
+
+\setlist{nolistsep}
 
 \begin{document}
 \begin{center}
@@ -42,14 +46,13 @@
 \section*{Education}
 \vspace{-8px}
 \hrule
-\vspace{8px}
+\vspace{4px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
 	\textbf{Vellore Institute of Technology} & Chennai, India \\
 	\textit{\small Bachelor of Technology in Computer Science and Engineering GPA: 8.88/10.0} & \textit{Expected May, 2019} 
 \end{tabularx}
 
-\vspace{8px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
 	\textbf{Army Public School, Shankar Vihar} & New Delhi, India \\
@@ -62,7 +65,7 @@
 \vspace{-8px}
 \hrule
 
-\vspace{8px}
+\vspace{4px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
 	\textbf{Google Summer of Code 2018} & \textit{April 2018 - August 2018} \\
@@ -75,7 +78,7 @@
 	\item Introduced interoperability by capturing MLV files (Magic Lantern) from native RAW12 of AXIOM cameras, which was easily saved to DNG sequence, allowing code reuse. This \textbf{saved months of development time} on otherwise writing performant code to render industry standard RAW file format.
 \end{itemize}
 
-\vspace{8px}
+\vspace{4px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
 	\textbf{Vicara Tech} & \textit{April 2018 - July 2018} \\
@@ -91,7 +94,7 @@
 \section*{Opensouce contributions}
 \vspace{-8px}
 \hrule
-\vspace{8px}
+\vspace{4px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
 	\textbf{OpenCine, Apertus Association} & \textit{February 2018 - Ongoing	} \\
@@ -100,11 +103,11 @@
 
 \begin{itemize}
 	\itemsep0em
-	\item OpenCine is a PC based raw processing tool designed from the ground up for moving images instead of still images, filling the deficit of an open source tool to process CinemaDNG MXF files.
-	\item Developed \textbf{libfuse-FrameServer} to serve frames of DNG sequences / RAW12 files to external applications (eg. Adobe Premiere Pro) by serving a proxy AVI processed by OCcore in the backend.
+	\item OpenCine is a raw processing tool designed from the ground up to process CinemaDNG MXF / MLV files.
+	\item Developed \textbf{libfuse-FrameServer}, serves proxy AVI from CDNG sequence / MLV processed by OCcore in the backend.
 \end{itemize}
 
-\vspace{8px}
+\vspace{6px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
 	\textbf{HelenOS} & \textit{March 2017 - September 2017} \\
@@ -120,14 +123,14 @@
 \section*{Projects}
 \vspace{-8px}
 \hrule
-
+\vspace{4px}
 \hspace{5px}
 \begin{itemize}
 	\item \textbf{DirectorySync}: Using inotify-tools to sync directories on linux systems over a network.
 	\item \textbf{PiNG12RAW}: RAW12 image debayering and channel extraction tool.
-	\item \textbf{Linpak}: A simple bash based script to install important packages based on the linux distribution. Used by Open Source communities: VisMa (Visual Math) and OpenCine.
-	\item \textbf{MJMLNewsletter}: An MJML based newsletter generation system using node.js, handlebars for monthly newsletters by Apertus Association.
-	\item \textbf{AirSense}: An economic air sensing device (less than INR 500) for sensing temperature, humidity and particles (ppm) for actively controlling home automation systems, connects to ThinkSpeak for data analysis.
+	\item \textbf{Linpak}: Distro specific package installer, written for bash. Used by Open Source: VisMa (Visual Math) and OpenCine.
+	\item \textbf{MJMLNewsletter}: An MJML based newsletter generation system using handlebars and nodeJS, Used by Apertus.
+	\item \textbf{AirSense}: Economic air sensing device (INR 500) for actively controlling HVAC, connects to ThinkSpeak for data analysis.
 \end{itemize}
 
 \section*{Publications}
@@ -154,7 +157,7 @@
 \hrule
 \vspace{8px}
 \begin{itemize}
-	\item \textbf{Languages}: C, C++, C#, Python, Java, JavaScipt
+	\item \textbf{Languages}: C, C++, C\#, Python, Java, JavaScipt
 	\item \textbf{Technologies}: Qt, ReactJS, NodeJS, Heroku, GCE, AWS
 	\item \textbf{Courses}: Machine Learning - Caltech, Advanced Algorithms - Harvard University
 \end{itemize}
