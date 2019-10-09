@@ -5,17 +5,24 @@
 % License: MIT License
 % -------------------------
 
-\documentclass[9pt, a4paper]{article}
+\documentclass[a4paper,6pt]{article}
 \usepackage{tabularx}
-\usepackage[left=0cm,right=1cm,bottom=1cm,top=1.5cm,bindingoffset=1cm]{geometry}
+\usepackage[left=0.5cm,right=1cm,bottom=1.5cm,top=1cm,bindingoffset=0.5cm]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{xcolor}
+\definecolor{mygray}{gray}{0.4}
+\usepackage[sfdefault,light]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
 
 % Margin adjustments
 %\addtolength{\oddsidemargin}{-1.5in}
 %\addtolength{\evensidemargin}{-1.5in}
 % Sans serif fontface
-\renewcommand{\familydefault}{\sfdefault}
+% \renewcommand{\familydefault}{\sfdefault}
 
 \titleformat{\section}
   {\normalfont\scshape}{\thesection}{1em}{}
@@ -29,10 +36,7 @@
 
 \begin{document}
 \begin{center}
-\Large \textbf{Supragya Raj}
-
-
-\normalsize Curriculum vitae
+\Large \textbf{SUPRAGYA RAJ}
 
 
 \end{center}
@@ -40,7 +44,6 @@
 	http://www.supragyaraj.com & Email: supragyaraj@gmail.com \\
 	http://github.com/supragya & +91 97907 22967 
 \end{tabularx}
-\newline
 
 
 \section*{Education}
@@ -50,17 +53,17 @@
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
 	\textbf{Vellore Institute of Technology} & Chennai, India \\
-	\textit{\small Bachelor of Technology in Computer Science and Engineering GPA: 8.88/10.0} & \textit{Expected May, 2019} 
+	\textit{\small Bachelor of Technology in Computer Science and Engineering \textcolor{mygray}{\textbf{GPA: 9.02/10.0}}} & \textit{July, 2019} 
 \end{tabularx}
 
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
 	\textbf{Army Public School, Shankar Vihar} & New Delhi, India \\
-	\textit{\small Senior Secondary, (PCM + CS), 12th CBSE:  95.6\% (aggregate), 98\% (CS)} & \textit{May 2015} \\
-	\textit{\small High School, 10th CBSE, CGPA 10.0} & \textit{May 2013}
+	\textit{\small Senior Secondary, (PCM + CS), 12th CBSE:  \textcolor{mygray}{\textbf{95.6\% (aggregate), 98\% (CS)}}} & \textit{May 2015} \\
+	\textit{\small High School, 10th CBSE, \textcolor{mygray}{\textbf{CGPA 10.0}}} & \textit{May 2013}
 \end{tabularx}
 
-
+\vspace{-9px}
 \section*{Experience}
 \vspace{-8px}
 \hrule
@@ -68,100 +71,137 @@
 \vspace{4px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
-	\textbf{Google Summer of Code 2018} & \textit{April 2018 - August 2018} \\
-	\textit{\small Student Developer, Apertus association} & \\
+	\large{\textbf{Cisco Systems}} & \\
+	\textit{\small Software Engineer} & \textit{July 2019 - Present} \\
 \end{tabularx}
 
+\small
 \begin{itemize}
 	\itemsep0em
-	\item Developed \textbf{raw video containering system} (file format specifications) over high speed USB3 and auxiliary Gigabit Ethernet channel from AXIOM Beta (Open Hardware) cameras.
-	\item Introduced interoperability by capturing MLV files (Magic Lantern) from native RAW12 of AXIOM cameras, which was easily saved to DNG sequence, allowing code reuse. This \textbf{saved months of development time} on otherwise writing performant code to render industry standard RAW file format.
+	\item Implementing controller side support for \textcolor{mygray}{\textbf{802.11r (wireless fast transition)}} allowing fast roaming between Cisco enterpise grade WiFi access points lowering roam times by around \textcolor{mygray}{\textbf{10 times}}.
+	\item System level development done in \textcolor{mygray}{\textbf{C}} with \textcolor{mygray}{\textbf{test driven development}} and used in large enterprises such as \textcolor{mygray}{\textbf{Google}}, \textcolor{mygray}{\textbf{Uber}}, \textcolor{mygray}{\textbf{Facebook}}, \textcolor{mygray}{\textbf{Amazon}} etc.
+    \item Also developing mapping layer code to translate \textcolor{mygray}{\textbf{openconfig}} standard based wireless management to commands usable by Cisco devices: written internally in \textcolor{mygray}{\textbf{erlang}}. 
 \end{itemize}
 
-\vspace{4px}
+\normalsize
+\vspace{2px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
-	\textbf{Vicara Tech} & \textit{April 2018 - July 2018} \\
-	\textit{\small Software Developer, Windows Service / .NET / SDK Development} & \\
+	\textit{\small Software Intern}& \textit{Jan 2019 - June 2019} \\
 \end{tabularx}
 
+\small
 \begin{itemize}
 	\itemsep0em
-	\item Developed \textbf{Kai Windows service} to allow custom software (eg. VLC media player) and deeply integrated systems to be controlled using a gesture control device on Windows platform.
-	\item Kai Service modules were build to be \textbf{light, less that 1MB in size} and allowed operations with \textbf{low latency, less than 10ms} (comparable to mouse/keyboard in terms of latency).
+    \item Designed and implemented heirarchial (pre)download mechanism allowing enterprise grade access points to download device images in a peer to peer fashion which earlier used to be central download based architecture. 
+    \item The code reduced load on Cisco wireless controllers and sped up download times from \textcolor{mygray}{\textbf{O(n)}} time to \textcolor{mygray}{\textbf{O(logn)}} becoming highly effective in enterprise deployments.
 \end{itemize}
 
-\section*{Open source contributions}
-\vspace{-8px}
-\hrule
-\vspace{4px}
+\normalsize
+\vspace{6px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
-	\textbf{OpenCine, Apertus Association} & \textit{February 2018 - Ongoing	} \\
-	\textit{\small Open Source contributor, Qt / C / C++} & \\
+	\large{\textbf{Google summer of code}} &  \\
+	\textit{\small Mentor, Apertus association}& \textit{March 2019 - Aug 2019} \\
 \end{tabularx}
 
+\small
 \begin{itemize}
 	\itemsep0em
-	\item OpenCine is a raw processing tool designed from the ground up to process CinemaDNG MXF / MLV files.
-	\item Developed \textbf{libfuse-FrameServer}, serves proxy AVI from CDNG sequence / MLV processed by OCcore in the backend.
+    \item Mentored a student in GSoC 2019 to develop a \textcolor{mygray}{\textbf{file system}} to serve raw video camera stills in RGB format through a pseudo AVI files making it readable by video players like \textcolor{mygray}{\textbf{VLC}} and editor programs like \textcolor{mygray}{\textbf{Adobe Premiere Pro}}.
 \end{itemize}
+
+\normalsize
+\vspace{2px}
+\hspace{5px}
+\begin{tabularx}{\textwidth}{X r}
+	\textit{\small Student Developer, Apertus association}& \textit{March 2018 - Aug 2018} \\
+\end{tabularx}
+\small
+\begin{itemize}
+	\itemsep0em
+	\item As a student developer in GSoC 2018, developed a \textcolor{mygray}{\textbf{file format specification}} and raw video containering system to save large amount of \textcolor{mygray}{\textbf{streaming data}} coming from cinema grade camera on disk. \textcolor{mygray}{\textbf{Saved months of development time}} by reusing already existing open source code for encoding and decoding the stream.
+\end{itemize}
+\normalsize
 
 \vspace{6px}
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
-	\textbf{HelenOS} & \textit{March 2017 - September 2017} \\
-	\textit{\small Open Source contributor, non POSIX C} & \\
+	\large{\textbf{Vicara Tech}} & \\
+	\textit{\small Software Developer Intern}& \textit{April 2018 - July 2018} \\
 \end{tabularx}
 
+\small
 \begin{itemize}
 	\itemsep0em
-	\item HelenOS is a micro kernel OS with a standard, working micro kernel design, however lacked fully functional shell system.
-	\item Developed \textbf{HLang} scripting language for writing automatic regression testing for nightly builds.
+	\item Developed \textcolor{mygray}{\textbf{Kai Windows service}} in C\# to allow custom software (eg. VLC media player) and deeply integrated systems to be controlled using a gesture control device on Windows platform.
+	\item Kai Service modules were build to be \textcolor{mygray}{\textbf{light, less that 1MB in size}} and allowed operations with \textcolor{mygray}{\textbf{low latency, less than 10ms}} (comparable to mouse/keyboard in terms of latency).
 \end{itemize}
+\normalsize
 
+\vspace{-9px}
 \section*{Projects}
 \vspace{-8px}
 \hrule
 \vspace{4px}
 \hspace{5px}
 \begin{itemize}
-	\item \textbf{DirectorySync}: Using inotify-tools to sync directories on linux systems over a network.
-	\item \textbf{PiNG12RAW}: RAW12 image debayering and channel extraction tool.
-	\item \textbf{RpiSpectrumWave}: Audio wave spectrum visualiser (VUmeter) on Common cathode display without driver circuit. 
-	\item \textbf{Linpak}: Distro specific package installer, written for bash. Used by Open Source: VisMa (Visual Math) and OpenCine.
-	\item \textbf{MJMLNewsletter}: An MJML based newsletter generation system using handlebars and nodeJS, Used by Apertus.
-	\item \textbf{AirSense}: Economic air sensing device (INR 500) for actively controlling HVAC, connects to ThingSpeak for data analysis.
+    \item \textbf{HLang Language \& interpreter}: \small Developed a scripting language and its interpreter to provide functionalities of Bourne Shell (bash) on an opensource microkernel operating system.
+\normalsize
+\vspace{2px}
+	\item \textbf{I.O.Stream}: \small Led a youtube channel and open source community with over \textcolor{mygray}{\textbf{6,000}} members developing open source code.
+\vspace{2px}
+\normalsize
+	\item \textbf{DirectorySync}: \small Using inotify-tools to sync directories on linux systems over a network.
+\vspace{2px}
+\normalsize
+	\item \textbf{PiNG12RAW}: \small RGB image extraction from cell matrix data of a camera sensor. \textcolor{mygray}{\textbf{over 120 forks on github}}. 
+\normalsize
 \end{itemize}
 
+\vspace{-9px}
 \section*{Publications}
 \vspace{-8px}
 \hrule
 \vspace{8px}
 \begin{itemize}
-	\item \textbf{eMDPM: Efficient Multi Dimensional Pattern Matching on GPU}, submitted and accepted in ICSICCS 2018, to be published by Springer Intl' Book series. Expected October, 2018.
+	\item \small Raj S., Chodnekar S.P., Harish T., Sriraman H. (2019) \textcolor{mygray}{\textbf{eMDPM: Efficient Multidimensional Pattern Matching Algorithm for GPU}}. In: Tiwari S., Trivedi M., Mishra K., Misra A., Kumar K. (eds) Smart Innovations in Communication and Computational Sciences. Advances in Intelligent Systems and Computing, vol 851. Springer, Singapore. 
+\normalsize
+\vspace{2px}
+	\item \small Agyeya O., Singh P., Prasad S., Raj S., Thomas Abraham J.V. (2019) \textcolor{mygray}{\textbf{Performance Evaluation of Guest Operating System Following Obliteration of Pre-installed Features}}. In: Chaki N., Devarakonda N., Sarkar A., Debnath N. (eds) Proceedings of International Conference on Computational Intelligence and Data Engineering. Lecture Notes on Data Engineering and Communications Technologies, vol 28. Springer, Singapore.
+\normalsize
 \end{itemize}
 
+\vspace{-9px}
 \section*{Awards and achievements}
 \vspace{-8px}
 \hrule
 \vspace{8px}
 \begin{itemize}
-	\item \textbf{Recommended by MHRD, India}: Letter of Appreciation by Smt. Smriti Irani, former minister, Ministry of Human Resource and Development, Govt. of India
-	\item \textbf{INSPIRE Fellowship}: Recipient of INSPIRE science fellowship (2013-2015), led by Dept. of Science and Technology and DRDO, India
-	\item \textbf{Host, Student Symposium} on security fundamentals and system interactions, VIT Chennai, 2016
-	\item \textbf{Coordinator, GameJam 2.0}: conducted and judged a 24-hour long hackathon on game development (Unity 3D), VIT Chennai, 2017
+	\item \textbf{Winner, Smart India Hackathon 2019, Goldman Sachs}: \small Mentored the team from IGDTUW, Delhi in GS problem set - smart transportation held at NIT, Calicut.
+\normalsize
+\vspace{2px}
+	\item \textbf{Teaching Assistant, Fall 2019}: \small Taught Theory of Computation and Compiler Design to a class of over 50 students at VIT Chennai. 
+\normalsize
+\vspace{2px}
+    \item \textbf{Recommendation by MHRD, India}: \small Letter of Appreciation by Smt. Smriti Irani, former minister, Ministry of Human Resource and Development, Govt. of India for performance in senior secondary examinations.
+\normalsize
+\vspace{2px}
+	\item \textbf{INSPIRE Fellowship}: \small Recipient of INSPIRE science fellowship (2013-2015), led by DST and DRDO, India.
+\normalsize
 \end{itemize}
 
-\section*{Skills and relevant proficiencies}
+\vspace{-9px}
+\section*{Programming Skills}
 \vspace{-8px}
 \hrule
 \vspace{8px}
 \begin{itemize}
-	\item \textbf{Languages}: C, C++, C\#, Python, Java, JavaScipt
-	\item \textbf{Technologies}: Qt, ReactJS, NodeJS, Heroku, GCE, AWS
-	\item \textbf{Courses}: Machine Learning - Caltech, Advanced Algorithms - Harvard University
+	\item \textbf{Programming Languages}: \small Intermediate: C, C++ | Working Knowledge: Javascript, Python, erlang
+\normalsize
+\vspace{2px}
+	\item \textbf{Technologies}: \small Linux, Cisco Wireless, node.js, AWS 
+\normalsize
 \end{itemize}
-
 
 \end{document}
