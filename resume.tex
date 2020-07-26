@@ -10,6 +10,7 @@
 \usepackage[left=0.5cm,right=1cm,bottom=1.5cm,top=1.5cm,bindingoffset=0.5cm]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{hyperref}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 \usepackage{xcolor}
@@ -41,8 +42,8 @@
 
 \end{center}
 \begin{tabularx}{\textwidth}{X r}
-	https://www.linkedin.com/in/supragyaraj & Email: supragyaraj@gmail.com \\
-	http://github.com/supragya & +91 97907 22967 
+	\href{https://www.linkedin.com/in/supragyaraj}{https://www.linkedin.com/in/supragyaraj} & Email: \href{mailto:supragyaraj@gmail.comj}{supragyaraj@gmail.com} \\
+	\href{http://github.com/supragya}{http://github.com/supragya} & +91 97907 22967 
 \end{tabularx}
 
 
@@ -61,8 +62,11 @@
 \small
 \begin{itemize}
 	\itemsep0em
-	\item Developing for, managing and instrumenting (Dev + Ops) a highly heterogeneous cloud infrastructure with over 7000 active terminals consisting of machines running all macintosh and windows operating systems along with supporting subsystems such as KMS, reverse proxies, jumphosts, smokeping, DHCP etc.
-    \item \textcolor{mygray}{\textbf{Hera SPOC framework}}: Architected and developed a single point of contact framework + tool for internal engineering teams to access, debug, automate and run diagnostics parallelly on terminals. Proves vital for testing terminal health and uptime internally.
+	\item Actively Developing for and managing (Dev + Ops) a highly heterogeneous cloud infrastructure with over 7000 active terminals consisting of machines running all macintosh and windows platforms.
+	\item Current cloud infrastructure consists of \textcolor{mygray}{\textbf{disparate components}} such as AWS, Windows KMS, VMware ESXi, reverse proxies, jumphosts, smokeping, DHCP etc.
+    \item \textcolor{mygray}{\textbf{Hera SPOC framework}}: Architected and developed a single point of contact framework + tool for internal engineering teams to access, debug, automate and run diagnostics parallelly on terminals. 
+    \item Hera allows status checks, configuration and actions to be taken from a \textcolor{mygray}{\textbf{single control panel}}.
+    \item \textcolor{mygray}{\textbf{Parallel diagnostics}} allows diagnostics tools to be provided as an endpoint to different teams. Also, proves vital for actively monitoring production health and uptime.
   \end{itemize}
 
 \vspace{4px}
@@ -78,23 +82,61 @@
 	\itemsep0em
 	\item \textcolor{mygray}{\textbf{Fast wireless swarm upgrades}}: Designed and implemented heirarchial (pre)download mechanism allowing enterprise grade access points to download device images in a peer to peer fashion which earlier used to be central download based architecture. 
         \item The Fast wireless swarm upgrade mechanism reduced bandwidth load on Cisco wireless controllers and sped up download times from \textcolor{mygray}{\textbf{O(n)}} time to \textcolor{mygray}{\textbf{O(logn)}}, becoming highly effective in enterprise deployments as well as deployments with a remotely connected controller.
+        \item The Fast wireless swarm upgrades system allowed a speed up of about \textcolor{mygray}{\textbf{6 times}}, reducing average swarm upgrade times from 90 minutes to 15-20 minutes per image upgrade.
 	\item  Implementing controller side support for \textcolor{mygray}{\textbf{802.11r (wireless fast transition)}}, allowing fast roaming between Cisco enterprise grade WiFi access points, lowering roam times by around \textcolor{mygray}{\textbf{10 times}}.
     \item \textcolor{mygray}{\textbf{Configuration translator}}: Developed mapping layer code to translate \textcolor{mygray}{\textbf{openconfig}} standard based wireless management to commands usable by Cisco devices. 
 \end{itemize}
 
-\vspace{6px}
+\section*{Projects and Open source contributions}
+\vspace{-8px}
+\hrule
+\vspace{4px}
+
+
 \hspace{5px}
 \begin{tabularx}{\textwidth}{X r}
-	\large{\textbf{Vicara Tech}} \small Vellore, TN, India& \\
-	\textit{\small Software Developer Intern}& \textit{April 2018 - July 2018} \\
+	{\textbf{\href{https://github.com/supragya/HLang}{HLang Shell Language and Interpreter}}} \small & \\
 \end{tabularx}
-
-\small
 \begin{itemize}
-	\itemsep0em
-	\item Developed a Windows service to allow custom software (eg. AutoCAD) to be controlled using a gesture control device on Windows platform. The service module was lightweight and allowed very low latency inputs - \textcolor{mygray}{\textbf{less than 10ms}} to be provided to the operating system.
-\end{itemize}
+    \item \small Developed a scripting language and its interpreter to provide a subset of functionalities provided by the Bourne Shell (bash) on an opensource \textcolor{mygray}{\textbf{microkernel}} (HelenOS) operating system.
+    \item \small The system included building AST, compile time optimisations etc. 
 \normalsize
+\end{itemize}
+
+
+
+\hspace{5px}
+\begin{tabularx}{\textwidth}{X r}
+	{\textbf{\href{https://github.com/supragya/AXIOM_RawStreamHandler}{Raw video container format}}} \small Google Summer of Code 2018& \\
+\end{tabularx}
+\begin{itemize}
+    \item \small Extending an already existing video file format: Magic Lantern's MLV video container (which existed for Canon cameras) to be used by apertus open source cameras. 
+    \item \small This allows video recording to be done straight onto a well supported video file format: MLV instead of only earlier option: image sequences.
+    \item \small Implemented, tested and benchmarked the performance of our usage of MLV file format on \textcolor{mygray}{\textbf{RAID 0 configs}}.
+\normalsize
+\end{itemize}
+
+\hspace{5px}
+\begin{tabularx}{\textwidth}{X r}
+	{\textbf{\href{https://github.com/supragya/libfuse-FrameServer}{libfuse-FrameServer}}} \small Google Summer of Code 2018, Mentor - 2019& \\
+\end{tabularx}
+\begin{itemize}
+    \item \small A pseudo file system implementation based on libfuse to provide \textcolor{mygray}{\textbf{RGBA video output}} for applications such as VLC, Adobe Premiere Pro from a \textcolor{mygray}{\textbf{raw stream of camera sensor output voltages}}.
+    \item \small The frameserver acts as a middleman which processes raw stream to RGBA values on the other end.
+    \item \small The framesever allowed one to control elements of stream processing such as \textcolor{mygray}{\textbf{HW acceleration, denoising, demosaicing, downscaling etc}}.
+    \item \small A related precursor project PiNG12RAW recieved \textcolor{mygray}{\textbf{over 120 forks on github}}. 
+    \normalsize
+\end{itemize}
+
+
+\section*{Publications}
+\vspace{-8px}
+\hrule
+\vspace{8px}
+\begin{itemize}
+	\item \small Raj S., Chodnekar S.P., Harish T., Sriraman H. (2019) \textcolor{mygray}{\textbf{eMDPM: Efficient Multidimensional Pattern Matching Algorithm for GPU}}. In: Tiwari S., Trivedi M., Mishra K., Misra A., Kumar K. (eds) Smart Innovations in Communication and Computational Sciences. Advances in Intelligent Systems and Computing, vol 851. Springer, Singapore. 
+\normalsize
+\end{itemize}
 
 
 \section*{Education}
@@ -116,54 +158,13 @@
 \end{tabularx}
 
 
-
-
-\section*{Projects and Open source contributions}
-\vspace{-8px}
-\hrule
-\vspace{4px}
-\hspace{5px}
-\begin{itemize}
-    \item \textbf{libfuse-FrameServer (Google Summer of Code 2018, 2019 Mentor)}:  \small A pseudo file system implementation based on libfuse to provide RGBA video output for applications such as VLC, Adobe Premiere Pro from a raw stream of camera sensor output voltages. The frameserver acts as a middleman which processes raw stream to RGBA values on the other end, allowing one to control elements of stream processing such as HW acceleration, denoising, demosaicing, downscaling etc.\normalsize
-\vspace{2px}
-    \item \textbf{Raw video container format (Google Summer of Code 2018)}: \small Extending Magic Lantern's MLV video container format (which existed for Canon cameras) to apertus open source camera. This allows video recording to be done straight onto a well supported video file format: MLV instead of only earlier option: image sequences.
- \vspace{2px}
-\normalsize
-	\item \textbf{PiNG12RAW}: \small RGB image extraction (demosaicing) from cell matrix data of a camera sensor. \textcolor{mygray}{\textbf{over 120 forks on github}}. 
-\normalsize
-\vspace{2px}
-    \item \textbf{HLang Language \& interpreter}: \small Developed a scripting language and its interpreter to provide functionalities of Bourne Shell (bash) on an opensource microkernel (HelenOS) operating system. The system included building AST, compile time optimisations etc. 
-
-\normalsize
-\end{itemize}
-
-
-\section*{Publications}
-\vspace{-8px}
-\hrule
-\vspace{8px}
-\begin{itemize}
-	\item \small Raj S., Chodnekar S.P., Harish T., Sriraman H. (2019) \textcolor{mygray}{\textbf{eMDPM: Efficient Multidimensional Pattern Matching Algorithm for GPU}}. In: Tiwari S., Trivedi M., Mishra K., Misra A., Kumar K. (eds) Smart Innovations in Communication and Computational Sciences. Advances in Intelligent Systems and Computing, vol 851. Springer, Singapore. 
-\normalsize
-\end{itemize}
-
-
 \section*{Awards and achievements}
 \vspace{-8px}
 \hrule
 \vspace{8px}
 \begin{itemize}
-	\item \textbf{Winner, Smart India Hackathon 2019, Goldman Sachs}: \small Mentored the team from IGDTUW, Delhi in GS problem set - smart transportation held at NIT, Calicut.
-\normalsize
-\vspace{2px}
-	\item \textbf{Teaching Assistant, Fall 2019}: \small Taught Theory of Computation and Compiler Design to a class of over 50 students at VIT Chennai. 
-\normalsize
-\vspace{2px}
-    \item \textbf{Recommendation by MHRD, India}: \small Letter of Appreciation by Smt. Smriti Irani, former minister, Ministry of Human Resource and Development, Govt. of India for performance in senior secondary examinations.
-\normalsize
-\vspace{2px}
-	\item \textbf{INSPIRE Fellowship}: \small Recipient of INSPIRE science fellowship (2013-2015), led by DST and DRDO, India.
-\normalsize
+	\item \small \textbf{Winner, Smart India Hackathon 2019, Goldman Sachs}: Mentored the team from IGDTUW, Delhi in GS problem set - smart transportation held at NIT, Calicut.
+	\item \small \textbf{\href{https://github.com/IOStream-OpenEnd}{IOStream OpenEnd}}: \small A youtube based channel and open source initiative to mentor students for GSoC. The community worked on multiple projects ranging from Audio Fingerprinting to Automatic Trailer generation mechanisms.
 \end{itemize}
 
 \end{document}
